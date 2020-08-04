@@ -1,5 +1,5 @@
 <div *ngIf="artist">
-  <div class="jumbotron text-center">
+  <div class="jumbotron bg-secondary text-center">
     <div *ngIf="artist?.images?.length > 0">
       <img class="rounded-circle border" src="{{ artist.images[0].url }}" />
     </div>
@@ -8,7 +8,7 @@
       Genres:
       <span
         *ngFor="let genre of artist.genres"
-        class="badge badge-pill badge-dark mx-1"
+        class="badge badge-pill badge-info mx-1"
         >{{ genre }}</span
       >
     </p>
@@ -18,7 +18,7 @@
     <div class="row">
       <div
         *ngFor="let album of albums"
-        class="col-lg-3 col-md-4 col-sm-6 bg-dark text-light card p-2"
+        class="col-lg-3 col-md-4 col-sm-6 bg-secondary text-light card p-2"
       >
         <div>
           <div *ngIf="album?.images?.length > 0">
@@ -26,13 +26,12 @@
             <div class="card-body">
               <h5>{{ album.name }}</h5>
             </div>
-            <div class="card-footer">
-              <a
-                class="btn btn-secondary btn-block"
-                [routerLink]="['/album', album.id]"
-                >Album Details</a
-              >
-            </div>
+
+            <a
+              class="btn btn-info btn-block"
+              [routerLink]="['/album', album.id]"
+              >Album Details</a
+            >
           </div>
         </div>
       </div>
