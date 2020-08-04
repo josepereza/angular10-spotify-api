@@ -1,15 +1,15 @@
 {
   "name": "angular-spotify-api",
   "version": "0.0.0",
+  "homepage": "https://abv-solutions.github.io/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href ./",
+    "build": "ng build --prod --output-path docs --base-href=/angular-spotify-api/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
